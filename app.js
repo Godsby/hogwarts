@@ -7,12 +7,14 @@ const bodyParser = require('body-parser');
 //import students.js from routes
 const students = require('./routes/students.js');
 const teachers = require('./routes/teachers');
+const wands = require('./routes/wands');
 //use bodyParser to encode to JSON
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 app.use('/students', students);
 app.use('/teachers', teachers);
+app.use('/wands', wands);
 
 
 app.get('/', (req, res) => {
